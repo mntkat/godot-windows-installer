@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "Godot Engine (C#/.NET)"
-!define PRODUCT_VERSION "4.6"
+!define PRODUCT_VERSION "4.6.1"
 !define PRODUCT_PUBLISHER "Godot Foundation"
 !define PRODUCT_WEB_SITE "http://www.godotengine.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\godot-mono.exe"
@@ -30,7 +30,7 @@
 ; Start menu page
 var ICONS_GROUP
 !define MUI_STARTMENUPAGE_NODISABLE
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER "Godot Engine\4.6 (C#/.NET)"
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER "Godot Engine\4.6.1 (C#/.NET)"
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT "${PRODUCT_UNINST_ROOT_KEY}"
 !define MUI_STARTMENUPAGE_REGISTRY_KEY "${PRODUCT_UNINST_KEY}"
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "${PRODUCT_STARTMENU_REGVAL}"
@@ -50,8 +50,8 @@ var ICONS_GROUP
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "bin/Godot 4.6 AllInOne Installer (C#.NET).exe"
-InstallDir "$PROGRAMFILES64\Godot Engine\4.6 (C#/.NET)"
+OutFile "bin/Godot 4.6.1 AllInOne Installer (C#.NET).exe"
+InstallDir "$PROGRAMFILES64\Godot Engine\4.6.1 (C#/.NET)"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
 ShowUnInstDetails show
@@ -139,24 +139,12 @@ Section "Godot" SEC01
   File "godot-mono\GodotSharp\Tools\Newtonsoft.Json.dll"
   File "godot-mono\GodotSharp\Tools\NuGet.Frameworks.dll"
   SetOutPath "$INSTDIR\GodotSharp\Tools\nupkgs"
-  File "godot-mono\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.0-rc.1.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.0-rc.2.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.0.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.0-rc.1.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.0-rc.2.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.0.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0-rc.1.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0-rc.1.snupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0-rc.2.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0-rc.2.snupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0.snupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0-rc.1.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0-rc.1.snupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0-rc.2.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0-rc.2.snupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0.nupkg"
-  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0.snupkg"
+  File "godot-mono\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.1.nupkg"
+  File "godot-mono\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.1.nupkg"
+  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharp.4.6.1.nupkg"
+  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharp.4.6.1.snupkg"
+  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.1.nupkg"
+  File "godot-mono\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.1.snupkg"
   SetOutPath "$INSTDIR\GodotSharp\Tools\pl"
   File "godot-mono\GodotSharp\Tools\pl\Microsoft.CodeAnalysis.CSharp.resources.dll"
   File "godot-mono\GodotSharp\Tools\pl\Microsoft.CodeAnalysis.resources.dll"
@@ -185,10 +173,10 @@ Section "Godot" SEC01
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
   CreateDirectory "$SMPROGRAMS\$ICONS_GROUP"
-  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Godot Engine 4.6 (C#/.NET).lnk" "$INSTDIR\godot-mono.exe"
-  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Remove Path Variable (4.6 C#/.NET).lnk" "$INSTDIR\PathEd.exe" 'remove "$INSTDIR"'
-  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Readd Path Variable (4.6 C#/.NET).lnk" "$INSTDIR\PathEd.exe" 'add "$INSTDIR"'
-  CreateShortCut "$DESKTOP\Godot Engine 4.6 (C#/.NET).lnk" "$INSTDIR\godot-mono.exe"
+  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Godot Engine 4.6.1 (C#/.NET).lnk" "$INSTDIR\godot-mono.exe"
+  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Remove Path Variable (4.6.1 C#/.NET).lnk" "$INSTDIR\PathEd.exe" 'remove "$INSTDIR"'
+  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Readd Path Variable (4.6.1 C#/.NET).lnk" "$INSTDIR\PathEd.exe" 'add "$INSTDIR"'
+  CreateShortCut "$DESKTOP\Godot Engine 4.6.1 (C#/.NET).lnk" "$INSTDIR\godot-mono.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
@@ -221,7 +209,7 @@ SectionEnd
 
 Section "Export Templates" SEC05
 SetOutPath "$DESKTOP"
-  File "godot-mono\Godot_v4.6-stable_mono_export_templates.tpz"
+  File "godot-mono\Godot_v4.6.1-stable_mono_export_templates.tpz"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
@@ -285,24 +273,24 @@ Section Uninstall
   Delete "$INSTDIR\GodotSharp\Tools\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll"
   Delete "$INSTDIR\GodotSharp\Tools\pl\Microsoft.CodeAnalysis.resources.dll"
   Delete "$INSTDIR\GodotSharp\Tools\pl\Microsoft.CodeAnalysis.CSharp.resources.dll"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0.snupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0-rc.2.snupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0-rc.2.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0-rc.1.snupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.0-rc.1.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0.snupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0-rc.2.snupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0-rc.2.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0-rc.1.snupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.0-rc.1.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.0.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.0-rc.2.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.0-rc.1.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.0.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.0-rc.2.nupkg"
-  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.0-rc.1.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.1.snupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.1.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.1-rc.2.snupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.1-rc.2.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.1-rc.1.snupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharpEditor.4.6.1-rc.1.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.1.snupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.1.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.1-rc.2.snupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.1-rc.2.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.1-rc.1.snupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\GodotSharp.4.6.1-rc.1.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.1.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.1-rc.2.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.SourceGenerators.4.6.1-rc.1.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.1.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.1-rc.2.nupkg"
+  Delete "$INSTDIR\GodotSharp\Tools\nupkgs\Godot.NET.Sdk.4.6.1-rc.1.nupkg"
   Delete "$INSTDIR\GodotSharp\Tools\NuGet.Frameworks.dll"
   Delete "$INSTDIR\GodotSharp\Tools\Newtonsoft.Json.dll"
   Delete "$INSTDIR\GodotSharp\Tools\Microsoft.VisualStudio.SolutionPersistence.dll"
@@ -370,10 +358,10 @@ Section Uninstall
 
   Delete "$SMPROGRAMS\$ICONS_GROUP\Uninstall.lnk"
   Delete "$SMPROGRAMS\$ICONS_GROUP\Website.lnk"
-  Delete "$DESKTOP\Godot Engine 4.6 (C#/.NET).lnk"
-  Delete "$SMPROGRAMS\$ICONS_GROUP\Godot Engine 4.6 (C#/.NET).lnk"
-  Delete "$SMPROGRAMS\$ICONS_GROUP\Remove Path Variable (4.6 C#/.NET).lnk"
-  Delete "$SMPROGRAMS\$ICONS_GROUP\Readd Path Variable (4.6 C#/.NET).lnk"
+  Delete "$DESKTOP\Godot Engine 4.6.1 (C#/.NET).lnk"
+  Delete "$SMPROGRAMS\$ICONS_GROUP\Godot Engine 4.6.1 (C#/.NET).lnk"
+  Delete "$SMPROGRAMS\$ICONS_GROUP\Remove Path Variable (4.6.1 C#/.NET).lnk"
+  Delete "$SMPROGRAMS\$ICONS_GROUP\Readd Path Variable (4.6.1 C#/.NET).lnk"
 
   RMDir "$SMPROGRAMS\$ICONS_GROUP"
   RMDir "$INSTDIR\GodotSharp\Tools\zh-Hant"
